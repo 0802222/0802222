@@ -1,5 +1,8 @@
 ## Hi there 👋
 
+![Static Badge](https://img.shields.io/badge/%3C%EA%B3%B5%EC%82%AC%EC%A4%91%3E%20Readme%20%EA%BE%B8%EB%AF%B8%EA%B8%B0%20%EC%A4%91-orange)
+
+
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=0802222)](https://github.com/0802222/github-readme-stats)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=0802222&layout=compact)
