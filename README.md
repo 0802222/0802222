@@ -38,12 +38,7 @@
 
 ### 🗃 Data
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=plastic&logo=MySQL&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=plastic&logo=MariaDB&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1?style=plastic&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=plastic&logo=MongoDB&logoColor=white)
-![Tensorflow](https://img.shields.io/badge/Tensorflow-FF6F00?style=plastic&logo=Tensorflow&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-013243?style=plastic&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/pandas-150458?style=plastic&logo=pandas&logoColor=white)
 
 ### 🖥 Client
 ![JSP](https://img.shields.io/badge/JSP-0074A6?style=plastic&logo=openjdk&logoColor=white)
@@ -53,13 +48,11 @@
 ### 💬 Languages
 ![Java](https://img.shields.io/badge/Java-007396?style=plastic&logo=OpenJDK&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-F7DF1E?style=plastic&logo=javascript&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-3178C6?style=plastic&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=plastic&logo=Python&logoColor=white)
 
 ---
 
 ## 🧩 Experience
-- **Programmers Devcourse 5th Backend Part** (2025.03 ~)
+- **Programmers Devcourse 5th Backend Part** (2025.02 ~)
 
 ---
 
