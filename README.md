@@ -327,4 +327,4 @@ DevOps: Docker Compose, GitHub Actions, AWS EC2
 
 ## 🚉 Commit Activity Stats
 
-<script src="https://gist.github.com/0802222/338403779e7b3bb02be6078db4c7d778.js"></script>
+[커밋 통계 보기](https://gist.github.com/0802222/338403779e7b3bb02be6078db4c7d778)
