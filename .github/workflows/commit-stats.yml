@@ -12,19 +12,16 @@ jobs:
           fetch-depth: 0
       - name: Update commit stats
         run: |
-          python3 << 'ENDPYTHON'
+          python3 << 'PYEOF'
           import json
           import subprocess
           import os
+          import urllib.request
           
-          # Count commits by hour
           M = D = E = N = T = 0
-          result = subprocess.run(
-            ['git', 'log', '--format=%ai'],
-            capture_output=True, text=True
-          )
+          result = subprocess.run(['git', 'log', '--format=%ai'], capture_output=True, text=True)
           
-          for line in result.stdout.strip().split('\\n'):
+          for line in result.stdout.strip().split('\n'):
             if not line:
               continue
             hour = int(line.split()[1][:2])
@@ -38,38 +35,25 @@ jobs:
             else:
               N += 1
           
-          # Calculate percentages
           MP = M * 100 // T if T > 0 else 0
           DP = D * 100 // T if T > 0 else 0
           EP = E * 100 // T if T > 0 else 0
           NP = N * 100 // T if T > 0 else 0
           
-          # Build content
-          content = f"""# I'm a night 🦉
-🌞 Morning {M} commits {MP}%
-🌆 Daytime {D} commits {DP}%
-🌃 Evening {E} commits {EP}%
-🌙 Night {N} commits {NP}%"""
+          content = '# I\'m a night 🦉\n'
+          content += '🌞 Morning ' + str(M) + ' commits ' + str(MP) + '%\n'
+          content += '🌆 Daytime ' + str(D) + ' commits ' + str(DP) + '%\n'
+          content += '🌃 Evening ' + str(E) + ' commits ' + str(EP) + '%\n'
+          content += '🌙 Night ' + str(N) + ' commits ' + str(NP) + '%'
           
-          # Build JSON payload
-          payload = {
-            "files": {
-              "I'm a night 🦉": {
-                "content": content
-              }
-            }
-          }
-          
-          # Send to Gist
-          import urllib.request
-          url = 'https://api.github.com/gists/338403779e7b3bb02be6078db4c7d778'
-          token = os.environ.get('GIST_TOKEN')
+          payload = {'files': {'I\'m a night 🦉': {'content': content}}}
+          data = json.dumps(payload).encode('utf-8')
           
           req = urllib.request.Request(
-            url,
-            data=json.dumps(payload).encode(),
+            'https://api.github.com/gists/338403779e7b3bb02be6078db4c7d778',
+            data=data,
             headers={
-              'Authorization': f'token {token}',
+              'Authorization': 'token ' + os.environ.get('GIST_TOKEN'),
               'Accept': 'application/vnd.github+json',
               'Content-Type': 'application/json'
             },
@@ -78,10 +62,10 @@ jobs:
           
           try:
             with urllib.request.urlopen(req) as response:
-              print(f'Success: {response.status}')
+              print('Status:', response.status)
           except Exception as e:
-            print(f'Error: {e}')
+            print('Error:', e)
             raise
-          ENDPYTHON
+          PYEOF
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
