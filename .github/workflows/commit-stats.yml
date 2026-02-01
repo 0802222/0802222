@@ -1,9 +1,9 @@
-name: Update Commit Stats
+name: Update Gist with Commit Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 매일 자정에 실행
-  workflow_dispatch:    # 수동 실행도 가능
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 
 jobs:
   update-gist:
@@ -11,83 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # 전체 히스토리 가져오기
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Calculate commit stats
-        id: stats
-        run: |
-          python - << 'EOF'
-          import subprocess
-          from datetime import datetime
-          import json
-          
-          # Git 로그에서 커밋 시간 가져오기
-          result = subprocess.run(
-              ['git', 'log', '--format=%H %ai'],
-              capture_output=True,
-              text=True,
-              cwd='.'
-          )
-          
-          # 시간대별 커밋 수 계산
-          time_stats = {
-              'Morning': {'count': 0, '06': 0, '07': 0, '08': 0, '09': 0, '10': 0, '11': 0},
-              'Daytime': {'count': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0},
-              'Evening': {'count': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0},
-              'Night': {'count': 0, '00': 0, '01': 0, '02': 0, '03': 0, '04': 0, '05': 0}
-          }
-          
-          total_commits = 0
-          
-          for line in result.stdout.strip().split('\n'):
-              if not line:
-                  continue
-              parts = line.split()
-              if len(parts) >= 2:
-                  timestamp = parts[1]  # YYYY-MM-DD
-                  time_part = parts[2]  # HH:MM:SS
-                  hour = time_part.split(':')[0]
-                  
-                  total_commits += 1
-                  
-                  if 6 <= int(hour) <= 11:
-                      time_stats['Morning']['count'] += 1
-                  elif 12 <= int(hour) <= 17:
-                      time_stats['Daytime']['count'] += 1
-                  elif 18 <= int(hour) <= 23:
-                      time_stats['Evening']['count'] += 1
-                  else:  # 0-5
-                      time_stats['Night']['count'] += 1
-          
-          # 퍼센트 계산
-          for period in time_stats:
-              count = time_stats[period]['count']
-              percentage = (count / total_commits * 100) if total_commits > 0 else 0
-              print(f"{period} {count} {percentage:.1f}%")
-          
-          # 환경 변수로 결과 전달
-          print(f"STATS={json.dumps(time_stats)}", file=open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a'))
-          EOF
+          fetch-depth: 0
 
       - name: Update Gist
         env:
           GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
           GIST_ID: '338403779e7b3bb02be6078db4c7d778'
         run: |
-          python - << 'EOF'
+          python3 << 'EOF'
           import subprocess
           import os
+          import requests
           from datetime import datetime
           
-          # Git 로그에서 커밋 시간 가져오기
+          # Get commit logs
           result = subprocess.run(
               ['git', 'log', '--format=%ai'],
               capture_output=True,
@@ -108,28 +45,30 @@ jobs:
           for line in result.stdout.strip().split('\n'):
               if not line:
                   continue
-              time_part = line.split()[1]  # HH:MM:SS
-              hour = int(time_part.split(':')[0])
-              total += 1
-              
-              for period, (start, end) in time_stats.items():
-                  if start <= hour <= end:
-                      counts[period] += 1
-                      break
+              parts = line.split()
+              if len(parts) >= 2:
+                  time_str = parts[1]  # HH:MM:SS format
+                  hour = int(time_str.split(':')[0])
+                  total += 1
+                  
+                  for period, (start, end) in time_stats.items():
+                      if start <= hour <= end:
+                          counts[period] += 1
+                          break
           
-          # Gist 콘텐츠 생성
+          # Create gist content
           gist_content = '# I\'m a night 🦉\n\n'
+          emoji_map = {'Morning': '🌞', 'Daytime': '🌆', 'Evening': '🌃', 'Night': '🌙'}
+          
           for period in ['Morning', 'Daytime', 'Evening', 'Night']:
               count = counts[period]
               pct = (count / total * 100) if total > 0 else 0
-              emoji = {'Morning': '🌞', 'Daytime': '🌆', 'Evening': '🌃', 'Night': '🌙'}[period]
+              emoji = emoji_map[period]
               gist_content += f'{emoji} {period:<10} {count:>4} commits {pct:>5.1f}%\n'
           
-          # Gist 업데이트
-          import requests
-          
+          # Update Gist
           headers = {
-              'Authorization': f'token {os.environ.get("GIST_TOKEN")}',
+              'Authorization': f'token {os.environ["GIST_TOKEN"]}',
               'Accept': 'application/vnd.github+json'
           }
           
@@ -141,12 +80,12 @@ jobs:
               }
           }
           
-          url = f'https://api.github.com/gists/{os.environ.get("GIST_ID")}'
+          url = f'https://api.github.com/gists/{os.environ["GIST_ID"]}'
           response = requests.patch(url, json=data, headers=headers)
           
           if response.status_code == 200:
-              print('✅ Gist 업데이트 성공!')
+              print('✅ Gist updated successfully!')
           else:
-              print(f'❌ 실패: {response.status_code}')
+              print(f'❌ Failed: {response.status_code}')
               print(response.text)
           EOF
