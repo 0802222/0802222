@@ -11,10 +11,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Update commit stats
-        env:
-          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          GIST_ID: 338403779e7b3bb02be6078db4c7d778
         run: |
+          #!/bin/bash
           M=0 D=0 E=0 N=0 T=0
           while read h; do
             ((T++))
@@ -31,17 +29,29 @@ jobs:
           EP=$((E*100/T))
           NP=$((N*100/T))
           
-          CONTENT="# I'm a night 🦉
+          # Build JSON payload
+          FILENAME="I'm a night 🦉"
+          CONTENT=$(cat <<'EOF'
+# I'm a night 🦉
 🌞 Morning $M commits $MP%
 🌆 Daytime $D commits $DP%
 🌃 Evening $E commits $EP%
-🌙 Night $N commits $NP%"
+🌙 Night $N commits $NP%
+EOF
+          )
           
+          # Escape JSON properly
+          CONTENT=$(echo "$CONTENT" | jq -Rs .)
+          
+          # Create the JSON payload
+          PAYLOAD=$(jq -n --arg f "$FILENAME" --arg c "$CONTENT" '{files: {($f): {content: $c}}}')
+          
+          # Send to Gist API
           curl -X PATCH \
-            -H "Authorization: token $GIST_TOKEN" \
+            -H "Authorization: token ${{ secrets.GIST_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
             -H "Content-Type: application/json" \
-            -d "{\"files\": {\"I'm a night 🦉\": {\"content\": \"$CONTENT\"}}}" \
-            https://api.github.com/gists/$GIST_ID
+            -d "$PAYLOAD" \
+            https://api.github.com/gists/338403779e7b3bb02be6078db4c7d778
           
           echo "Done!"
