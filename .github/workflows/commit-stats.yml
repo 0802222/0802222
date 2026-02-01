@@ -1,5 +1,4 @@
-name: Update Gist with Commit Stats
-
+name: Update Gist
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -13,79 +12,52 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Update Gist
-        env:
-          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
-          GIST_ID: '338403779e7b3bb02be6078db4c7d778'
+      - name: Update Gist Stats
         run: |
-          python3 << 'EOF'
-          import subprocess
-          import os
-          import requests
-          from datetime import datetime
+          # 컬미트 로그 가져오기
+          MORNING=0
+          DAYTIME=0
+          EVENING=0
+          NIGHT=0
+          TOTAL=0
+
+          while IFS= read -r line; do
+            HOUR=$(echo "$line" | cut -d' ' -f2 | cut -d':' -f1)
+            TOTAL=$((TOTAL + 1))
+            
+            if [ $HOUR -ge 6 ] && [ $HOUR -lt 12 ]; then
+              MORNING=$((MORNING + 1))
+            elif [ $HOUR -ge 12 ] && [ $HOUR -lt 18 ]; then
+              DAYTIME=$((DAYTIME + 1))
+            elif [ $HOUR -ge 18 ]; then
+              EVENING=$((EVENING + 1))
+            else
+              NIGHT=$((NIGHT + 1))
+            fi
+          done < <(git log --format=%ai)
+
+          # 두감도 계산
+          MORNING_PCT=$(echo "scale=1; $MORNING * 100 / $TOTAL" | bc 2>/dev/null || echo "0.0")
+          DAYTIME_PCT=$(echo "scale=1; $DAYTIME * 100 / $TOTAL" | bc 2>/dev/null || echo "0.0")
+          EVENING_PCT=$(echo "scale=1; $EVENING * 100 / $TOTAL" | bc 2>/dev/null || echo "0.0")
+          NIGHT_PCT=$(echo "scale=1; $NIGHT * 100 / $TOTAL" | bc 2>/dev/null || echo "0.0")
+
+          # Gist 내용 만들기
+          CONTENT="# I'm a night 🦉
+
+🌞 Morning     $MORNING commits $MORNING_PCT%
+🌆 Daytime    $DAYTIME commits $DAYTIME_PCT%
+🌃 Evening    $EVENING commits $EVENING_PCT%
+🌙 Night      $NIGHT commits $NIGHT_PCT%"
+
+          # JSON 데이터 방직
+          CONTENT_JSON=$(echo "$CONTENT" | jq -Rs .)
           
-          # Get commit logs
-          result = subprocess.run(
-              ['git', 'log', '--format=%ai'],
-              capture_output=True,
-              text=True,
-              cwd='.'
-          )
+          # Gist API 호출
+          curl -X PATCH \
+            -H "Authorization: token ${{ secrets.GIST_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -d "{\"files\": {\"I'm a night 🦉\": {\"content\": $CONTENT_JSON}}}" \
+            https://api.github.com/gists/338403779e7b3bb02be6078db4c7d778
           
-          time_stats = {
-              'Morning': [6, 11],
-              'Daytime': [12, 17],
-              'Evening': [18, 23],
-              'Night': [0, 5]
-          }
-          
-          counts = {k: 0 for k in time_stats}
-          total = 0
-          
-          for line in result.stdout.strip().split('\n'):
-              if not line:
-                  continue
-              parts = line.split()
-              if len(parts) >= 2:
-                  time_str = parts[1]  # HH:MM:SS format
-                  hour = int(time_str.split(':')[0])
-                  total += 1
-                  
-                  for period, (start, end) in time_stats.items():
-                      if start <= hour <= end:
-                          counts[period] += 1
-                          break
-          
-          # Create gist content
-          gist_content = '# I\'m a night 🦉\n\n'
-          emoji_map = {'Morning': '🌞', 'Daytime': '🌆', 'Evening': '🌃', 'Night': '🌙'}
-          
-          for period in ['Morning', 'Daytime', 'Evening', 'Night']:
-              count = counts[period]
-              pct = (count / total * 100) if total > 0 else 0
-              emoji = emoji_map[period]
-              gist_content += f'{emoji} {period:<10} {count:>4} commits {pct:>5.1f}%\n'
-          
-          # Update Gist
-          headers = {
-              'Authorization': f'token {os.environ["GIST_TOKEN"]}',
-              'Accept': 'application/vnd.github+json'
-          }
-          
-          data = {
-              'files': {
-                  'I\'m a night 🦉': {
-                      'content': gist_content
-                  }
-              }
-          }
-          
-          url = f'https://api.github.com/gists/{os.environ["GIST_ID"]}'
-          response = requests.patch(url, json=data, headers=headers)
-          
-          if response.status_code == 200:
-              print('✅ Gist updated successfully!')
-          else:
-              print(f'❌ Failed: {response.status_code}')
-              print(response.text)
-          EOF
+          echo "\n✅ Gist updated successfully!"
