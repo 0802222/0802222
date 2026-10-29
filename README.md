@@ -1,330 +1,197 @@
 <div align="center">
-  
-# 👋 안녕하세요, 이초롱입니다!
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Backend+Developer;Always+Learning+%26+Growing;6+months+%7C+4+Projects+Completed;N%2B1+Query+Optimization+95%25" alt="Typing SVG" />
+<h1>이초롱 <sub><sup>Chorong Lee</sup></sub></h1>
 
-</div>
+<p><b>Backend Developer</b> · Java / Spring Boot 백엔드 개발 · Python과 AI 학습 중</p>
 
-<div align="center">
-  
-[![Blog](https://img.shields.io/badge/Blog-devmee.tistory.com-20C997?style=for-the-badge&logo=tistory&logoColor=white)](https://devmee.tistory.com/)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
-[![GitHub](https://img.shields.io/badge/GitHub-0802222-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0802222)
+[![Blog](https://img.shields.io/badge/Tech_Blog-devmee.tistory.com-24292f?style=flat-square&logo=tistory&logoColor=white)](https://devmee.tistory.com/)
+[![Mail](https://img.shields.io/badge/Mail-0802222@naver.com-24292f?style=flat-square&logo=naver&logoColor=white)](mailto:0802222@naver.com)
 
 </div>
 
----
+<br/>
 
-## 🙋‍♂️ About Me
+## 👋 About Me
 
-```java
-public class Developer {
-    private String name = "이초롱 (Chorong Lee)";
-    private String role = "Backend Developer";
-    private String[] currentFocus = {
-        "부트캠프 수료 후 개인 프로젝트 진행 중",
-        "JPA 성능 최적화 & 무중단 배포 경험",
-        "팀 협업부터 개인 프로젝트까지 끊임없이 성장하는 개발자"
-    };
-    
-    public String introduce() {
-        return "6개월간 4개 프로젝트를 완성하며 빠르게 성장 중입니다. " +
-               "팀 프로젝트 경험과 개인 프로젝트를 통해 실무 역량을 쌓고 있으며, " +
-               "N+1 문제 95% 개선, 무중단 배포 구축 등 실질적인 성과를 만들어왔습니다.";
-    }
-}
-```
+- Java/Spring Boot 기반 게시판, 지도 공유 서비스 등 **백엔드 프로젝트 4건 개발**
+- JPA N+1 개선으로 **쿼리 21회 → 1회 단축**, GitHub Actions **Blue-Green 무중단 배포 구축**
+- Codyssey 기초과정에서 Linux 운영, AWS 인프라, 장애 분석, 자료구조 직접 구현
+- 현재 Codyssey **AI 심화 과정**에서 데이터 분석 · 머신러닝 학습 중
 
-<br>
+<br/>
 
-## 🛠 Tech Stack
+## 🛤️ Learning Path
 
-<div align="center">
+| 기간 | 과정 | 내용 |
+|:---|:---|:---|
+| **2025.02 ~ 2025.08** | 프로그래머스 - 백엔드 데브코스 5기 | Java, Spring Boot, JPA, MyBatis 학습 · 팀 프로젝트 3건 수행 (최종 MAPICK) |
+| **2026.05.08 ~ 2026.10** | 이노베이션 아카데미 - Codyssey AI/SW 기초 과정 | 필수 미션 전체 PASS (웹 기초 · Python · Git · 클라우드 · AI API · Linux · OS · 자료구조 · DB · 백엔드) · 텀 프로젝트 AI ChatBot - EasyExplain 개발 |
+| **2026.11 ~** | 이노베이션 아카데미 - Codyssey AI/SW 심화 과정 | 데이터 분석 · CV · NLP · ML · 딥러닝 학습 중 |
 
-### Backend
-![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=OpenJDK&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-59666C?style=for-the-badge&logo=Hibernate&logoColor=white)
-![QueryDSL](https://img.shields.io/badge/QueryDSL-0085CA?style=for-the-badge)
-![MyBatis](https://img.shields.io/badge/MyBatis-005B9F?style=for-the-badge)
+<br/>
 
-### Database
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=Redis&logoColor=white)
+## 🧰 Tech Stack
+ 
+<table>
+  <tr>
+    <td align="center" width="110"><b>⚙️ Backend</b></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=java" width="44" height="44" alt="Java" /><br/><sub><b>Java</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=spring" width="44" height="44" alt="Spring Boot" /><br/><sub><b>Spring Boot</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=python" width="44" height="44" alt="Python" /><br/><sub><b>Python</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=fastapi" width="44" height="44" alt="FastAPI" /><br/><sub><b>FastAPI</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="110"><b>🗄️ Data</b></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=mysql" width="44" height="44" alt="MySQL" /><br/><sub><b>MySQL</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=postgres" width="44" height="44" alt="PostgreSQL" /><br/><sub><b>PostgreSQL</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=sqlite" width="44" height="44" alt="SQLite" /><br/><sub><b>SQLite</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="110"><b>☁️ Infra</b></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=aws" width="44" height="44" alt="AWS" /><br/><sub><b>AWS</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=docker" width="44" height="44" alt="Docker" /><br/><sub><b>Docker</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=nginx" width="44" height="44" alt="Nginx" /><br/><sub><b>Nginx</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=githubactions" width="44" height="44" alt="Actions" /><br/><sub><b>Actions</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=linux" width="44" height="44" alt="Linux" /><br/><sub><b>Linux</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=bash" width="44" height="44" alt="Bash" /><br/><sub><b>Bash</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="110"><b>🛠️ Tools</b></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=idea" width="44" height="44" alt="IntelliJ" /><br/><sub><b>IntelliJ</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=pycharm" width="44" height="44" alt="PyCharm" /><br/><sub><b>PyCharm</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=vscode" width="44" height="44" alt="VS Code" /><br/><sub><b>VS Code</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=git" width="44" height="44" alt="Git" /><br/><sub><b>Git</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=github" width="44" height="44" alt="GitHub" /><br/><sub><b>GitHub</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=postman" width="44" height="44" alt="Postman" /><br/><sub><b>Postman</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center" width="110"><b>🌱 Exposed</b><br/><sub>강의·실습 경험</sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=kotlin" width="44" height="44" alt="Kotlin" /><br/><sub><b>Kotlin</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=redis" width="44" height="44" alt="Redis" /><br/><sub><b>Redis</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=html" width="44" height="44" alt="HTML" /><br/><sub><b>HTML</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=css" width="44" height="44" alt="CSS" /><br/><sub><b>CSS</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=js" width="44" height="44" alt="JavaScript" /><br/><sub><b>JavaScript</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=react" width="44" height="44" alt="React" /><br/><sub><b>React</b></sub></td>
+    <td align="center" width="88"><img src="https://skillicons.dev/icons?i=ts" width="44" height="44" alt="TypeScript" /><br/><sub><b>TypeScript</b></sub></td>
+  </tr>
+</table>
+<br/>
 
-### DevOps & Tools
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![AWS EC2](https://img.shields.io/badge/AWS%20EC2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=Nginx&logoColor=white)
+## 🚀 Featured Projects
 
-### Testing & Documentation
-![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=JUnit5&logoColor=white)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=black)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📝 <a href="https://github.com/0802222/board_r">Board_R</a></h3>
+      <sub>개인 · 2025.10 ~ 12</sub>
+      <p>Spring Boot 게시판. 기본 CRUD부터 성능 최적화, 무중단 배포까지 혼자 끝까지 구현</p>
+      <p>
+        ✅ <b>N+1 쿼리 21회 → 1회</b> (Fetch Join · @EntityGraph)<br/>
+        ✅ GitHub Actions + Nginx <b>Blue-Green 무중단 배포</b><br/>
+        ✅ QueryDSL 동적 검색 · 계층형 댓글 · 다중 이미지 업로드<br/>
+        ✅ JUnit5 · Mockito · MockMvc 테스트
+      </p>
+      <img src="https://img.shields.io/badge/Java_21-007396?style=flat-square&logo=openjdk&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Spring_Boot_3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
+      <img src="https://img.shields.io/badge/QueryDSL-0085CA?style=flat-square"/>
+      <img src="https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white"/>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🤖 <a href="https://github.com/0802222/Codyssey-B7-1-Term-Project">EasyExplain</a></h3>
+      <sub>팀 · 2026.10 · Codyssey 텀 프로젝트</sub>
+      <p>어려운 내용을 쉽게 풀어 주는 웹 기반 AI 챗봇 서비스</p>
+      <p>
+        ✅ FastAPI 단일 서버로 웹 페이지 + API 제공<br/>
+        ✅ 이전 대화를 함께 보내 <b>맥락을 기억하는 대화</b><br/>
+        ✅ SQLite 대화 저장, Railway 배포<br/>
+        ✅ 이슈 · PR 기반 팀 협업
+      </p>
+      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Claude_API-D97757?style=flat-square&logo=anthropic&logoColor=white"/>
+      <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎯 <a href="https://github.com/0802222/SOOBAK_BE">SOOBAK</a></h3>
+      <sub>팀 6명 · 2025.08 ~ · MAPICK 고도화</sub>
+      <p>지도 공유 플랫폼을 실제 서비스 수준으로 다시 설계</p>
+      <p>
+        ✅ 댓글 · 대댓글 시스템 재설계<br/>
+        ✅ 우회 입력까지 막는 <b>욕설 필터링</b><br/>
+        ✅ 사용자 30명 알파 · 베타 테스트 피드백 반영
+      </p>
+      <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
+      <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🗺️ <a href="https://github.com/0802222/WEB5_6_GitSunJaeAb_BE">MAPICK</a></h3>
+      <sub>팀 9명 · 2025.06 ~ 07</sub>
+      <p>장소를 모아 주제별 지도를 만들고 공유하는 소셜 플랫폼</p>
+      <p>
+        ✅ 지도 레이어 CRUD · <b>Fork</b> 기능<br/>
+        ✅ 알림 · 공지 API, 스케줄러 배치<br/>
+        ✅ WebSocket · STOMP 실시간 협업 지도
+      </p>
+      <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white"/>
+      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
+      <img src="https://img.shields.io/badge/WebSocket-010101?style=flat-square&logo=socketdotio&logoColor=white"/>
+    </td>
+  </tr>
+</table>
 
-</div>
+<br/>
 
-<br>
+## 🛰️ Codyssey — AI/SW 기초 과정 <sub>2026.05.08 ~ 2026.10 · 필수 미션 전체 PASS</sub>
 
-## 📊 GitHub Stats
+> 미션별 개념 학습 → 구현 → 동료 평가 3회 PASS
 
-<div align="center">
+| 분야 | 미션 | 한 줄 요약 | 기술 |
+|:---|:---|:---|:---|
+| 🌐 웹 기초 | [B1-1 MyProfile](https://github.com/0802222/Codyssey-B1-1-MyProfile) | 라이브러리 없이 만든 반응형 소개 페이지 | `HTML` `CSS` `JS` `GitHub Pages` |
+| 🐍 Python · Git | [B2-1](https://github.com/0802222/Codyssey-B2-1) | 용돈 기입장 CLI 프로그램 | `Python` |
+| 🐍 Python · Git | [B2-2 TeamProject](https://github.com/0802222/Codyssey-B2-2-TeamProject) | 브랜치 · PR 규칙으로 팀 협업 연습 | `Git Flow` `PR Review` |
+| ☁️ 클라우드 · AI API | [B3-1 AWS](https://github.com/0802222/Codyssey-B3-1-AWS) | VPC · 서브넷 · EC2로 웹 서버 직접 공개 | `AWS VPC` `EC2` |
+| ☁️ 클라우드 · AI API | [B3-2 AI-API](https://github.com/0802222/Codyssey-B3-2-AI-API) | 코드 변경을 읽고 커밋 · PR 문구를 써 주는 CLI | `Claude API` `urllib` |
+| 🐧 Linux · OS | [B4-1](https://github.com/0802222/Codyssey-B4-1) | SSH · UFW 보안 설정, cron 자동 상태 점검 | `Ubuntu` `Bash` `cron` |
+| 🐧 Linux · OS | [B4-2](https://github.com/0802222/Codyssey-B4-2) | OOM · CPU 과점유 · 데드락 재현 후 장애 리포트 | `Bash` `top/ps` `GitHub Issue` |
+| 🧮 자료구조 | [B5-1 Redis](https://github.com/0802222/Codyssey-B5-1-Redis) | 해시맵 · 연결 리스트 · 힙으로 만든 Mini Redis | `Python` `LRU` `TTL` |
+| 🧮 자료구조 | [B5-2 Mini-Git](https://github.com/0802222/Codyssey-B5-2-Mini-Git) | 파일 변경 이력을 기록하는 작은 Git | `Python` `Hash` |
+| 🗄️ DB · 백엔드 | [B6-1 Database](https://github.com/0802222/Codyssey-B6-1-Database) | 스키마 설계부터 쿼리까지 직접 구성 | `MySQL` `SQL` |
+| 🤖 Term Project | [B7-1 EasyExplain](https://github.com/0802222/Codyssey-B7-1-Term-Project) | 웹 기반 AI 챗봇 서비스 | `FastAPI` `SQLite` `Claude API` |
 
-<img src="https://github-readme-stats.vercel.app/api?username=0802222&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="GitHub Stats" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=0802222&theme=tokyonight&hide_border=true&background=1a1b27" alt="GitHub Streak" width="48%" />
+<details>
+<summary>🎒 입학연수 과정</summary>
+<br/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0802222&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b27" alt="Top Languages" width="48%" />
-
-</div>
-
-<br>
-
-## 🚀 Projects
-
-<details open>
-<summary><b>📌 클릭하여 프로젝트 상세보기</b></summary>
-
-<br>
-
-### 🗺️ MAPICK - 소셜 기반 커스텀 지도 플랫폼
-
-> **프로그래머스 데브코스 백엔드 5기 최종 프로젝트** | 2025.06 ~ 2025.07 (5주)
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/prgrms-web-devcourse-final-project/WEB5_6_GitSunJaeAb_BE)
-[![Demo](https://img.shields.io/badge/Demo-Mocking%20Server-4285F4?style=flat-square)](https://mapick.cedartodo.uk/)
-
-**팀 규모:** 9명 (BE 5명, FE 4명)
-
-</div>
-
-**💡 프로젝트 개요**
-- 사용자가 직접 장소를 등록하여 주제별 지도(로드맵)를 만들고 공유하는 소셜 플랫폼
-- 개인 로드맵, 실시간 협업 지도, 위치 기반 퀘스트 시스템 제공
-
-**🔧 기술 스택**
-```
-Backend: Java 21, Spring Boot, Spring Security, OAuth2, JWT
-Data: JPA, QueryDSL, PostgreSQL
-Real-time: WebSocket, STOMP
-External API: Google Maps API
-DevOps: Docker, GitHub Actions, AWS EC2
-```
-
-**👨‍💻 담당 역할**
-- ✅ 지도 - 레이어 관리 API 개발 (CRUD, Fork 기능)
-- ✅ 알림, 공지 API 개발 (CURD, 스케쥴러로 배치작업)
-- ✅ Swagger API 문서 자동화 및 프론트엔드 협업
-
-**📈 성과 & 배움**
-- 🎯 대규모 팀 협업 경험 (9명 규모)
-- 🎯 WebSocket 기반 실시간 통신 구현
-- 🎯 복잡한 도메인 설계 (로드맵, 장소, 레이어, 마커)
-- 🎯 Git Flow & PR 리뷰 프로세스 체득
-
----
-
-### 🎯 SOOBAK - MAPICK 고도화 프로젝트
-
-> **실제 서비스 출시 준비** | 2025.08 ~ 현재 진행중
-
-<div align="center">
-
-[![Backend](https://img.shields.io/badge/GitHub-Backend-181717?style=flat-square&logo=github)](https://github.com/SOOBAK-mapick-ver2/SOOBAK_BE)
-[![Frontend](https://img.shields.io/badge/GitHub-Frontend-61DAFB?style=flat-square&logo=react)](https://github.com/SOOBAK-mapick-ver2/SOOBAK_FE)
-
-**팀 규모:** 6명 (BE 5명, FE 1명)
-
-</div>
-
-**💡 프로젝트 개요**
-- 부트캠프 최종 프로젝트를 실제 서비스 수준으로 고도화
-- 30명 대상 알파/베타 테스트 후 사용자 피드백 기반 재설계
-- GitHub Actions를 통한 Blue-Green 무중단 배포 구축 (개선 중)
-
-**🔧 기술 스택**
-```
-Backend: Java, Spring Boot, Spring Security, JWT
-Data: JPA, QueryDSL, MySQL
-Frontend: React, TypeScript
-DevOps: Docker Compose, GitHub Actions, AWS EC2
-```
-
-**👨‍💻 담당 역할 & 개선사항**
-- ✅ 댓글/대댓글 시스템 재설계
-- ✅ 욕설 필터링 시스템 구현 (악의적 우회 방지)
-
-**📈 성과 & 배움**
-- 🎯 사용자 피드백 기반 개발 (30명 테스트)
-- 🎯 부트캠프 종료 후 팀 지속성 유지
-- 🎯 부트캠프 당시 시도 못한 기술 스택 적용
-
----
-
-### 📝 Board_R - 게시판 프로젝트
-
-> **Spring Boot 실무 학습 프로젝트** | 2025.10 ~ 2025.12
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/0802222/board_r)
-
-**개인 프로젝트**
-
-</div>
-
-**💡 프로젝트 개요**
-- Spring Boot 기본기부터 실무 기술까지 학습 목적
-- CRUD, 파일 업로드, 동적 검색, 무중단 배포까지 구현
-
-**🔧 기술 스택**
-```
-Backend: Java 21, Spring Boot 3.5.5, Spring Security
-Data: JPA, QueryDSL, MySQL 8.0
-DevOps: Docker Compose, GitHub Actions, AWS EC2, Nginx
-Test: JUnit5, Mockito, MockMvc
-```
-
-**👨‍💻 구현 기능**
-- ✅ 사용자 관리 (회원가입, 로그인, 프로필)
-- ✅ 게시글 CRUD & 조회수
-- ✅ 계층형 댓글 시스템 (대댓글, Soft Delete)
-- ✅ 파일 업로드 (프로필 이미지, 게시글 다중 이미지)
-- ✅ QueryDSL 동적 검색 & 페이징/정렬
-- ✅ 통합 예외 처리 & API 응답 표준화
-
-**📈 핵심 성과**
-```diff
-+ N+1 문제 해결: 쿼리 95% 감소 (21회 → 1회)
-+ Blue-Green 무중단 배포 시스템 구축
-+ Fetch Join & @EntityGraph 성능 최적화
-+ JUnit 기반 테스트 코드 작성
-```
-
----
-
-### 🎨 Mandalart - 목표 관리 서비스
-
-> **만다라트 기법 기반 플랫폼** | 2025.12 ~ 진행중
-
-<div align="center">
-
-[![Backend](https://img.shields.io/badge/GitHub-Backend-181717?style=flat-square&logo=github)](https://github.com/0802222/Mandalart_backend)
-[![Frontend](https://img.shields.io/badge/GitHub-Frontend-61DAFB?style=flat-square&logo=react)](https://github.com/0802222/Mandalart-Front)
-
-**개인 프로젝트 (풀스택)**
-
-</div>
-
-**💡 프로젝트 개요**
-- 만다라트 기법을 활용한 목표 설정 및 관리 플랫폼
-- 9x9 매트릭스로 목표를 시각화하고 진행률 추적
-- 부업 아이템으로 기획, 실제 서비스 출시 목표
-
-**🔧 기술 스택**
-```
-Backend: Java, Spring Boot, Spring Security, JWT
-Data: JPA, QueryDSL, MySQL, Redis
-Frontend: React, TypeScript
-DevOps: Docker Compose, GitHub Actions, AWS EC2
-```
-
-**📅 진행 상황** (2026.01 기준)
-- ✅ 프로젝트 기획 & ERD 설계 완료
-- ✅ 백엔드 API 기본 구조 세팅
-- ✅ 사용자 인증/인가 시스템 구현
-- 🚧 만다라트 매트릭스 CRUD (진행 중)
-- 🚧 프론트엔드 개발 (진행 중)
-- ⬜ 배포 및 운영 (예정)
+- [Codyssey-Beginner-Course](https://github.com/0802222/Codyssey-Beginner-Course) — Python 기초 미션
 
 </details>
 
-<br>
+<br/>
 
-## 💼 Experience
+## 🔭 Now — Codyssey AI 심화 과정 <sub>2026.10 ~</sub>
 
-### 🎓 Education
-
-**프로그래머스 데브코스 5기 백엔드 과정** `2025.02 ~ 2025.08`
-- Java, Spring Boot, JPA, MyBatis 학습
-- 팀 프로젝트 경험 (최종 프로젝트 MAPICK 포함)
-- Git 협업 및 Agile 방법론 실습
-- 실전형 프로젝트 중심 교육
-
-<br>
-
-### 💼 Career Journey
-
-```
-2012-2019  │  연구사무 (7년)
-           │  ├─ 연구 프로젝트 행정 지원 및 데이터 관리
-           │  ├─ DRM/DLP 관리, PMS 운영
-           │  └─ 연구노트 및 특허 관리
-           │
-2019-2022  │  전략기획 (3년)
-           │  ├─ 국책사업 운영 (SMTECH 6억, SMES 3억)
-           │  ├─ 데이터 기반 의사결정 지원
-           │  └─ 부서 간 협업 및 프로젝트 관리
-           │
-2022-2025  │  개발자 전환
-           │  ├─ 2022년 독학으로 프로그래밍 학습 시작
-           │  └─ 2025년 프로그래머스 데브코스 수료
-           │
-2025-현재   │  Backend Developer
-           │  ├─ 6개월간 4개 프로젝트 완성
-           │  ├─ N+1 문제 95% 개선
-           │  └─ 무중단 배포 시스템 구축
+```text
+📊 데이터 분석   ▸ RFM 고객 분석                    ⏳ 2026.11 시작
+📐 AI 수학       ▸ 선형대수 · 미적분 · 확률
+👁️ Computer Vision ▸ 문서 스캐너 · 영상 객체 추적
+💬 NLP           ▸ TF-IDF · 정규식 · 감성 분석
+🌳 Machine Learning ▸ 신용 · 연체 예측 · 군집 · SHAP
+🧠 Deep Learning ▸ 미니 프레임워크 · 전이학습 · RNN
 ```
 
-**💪 강점**
-- 10년 실무 경력 기반 **문제 해결 능력**
-- 프로젝트 관리 & **협업 경험**
-- **비즈니스 마인드** & 빠른 학습 능력
+<br/>
 
-<br>
-
-## 📚 Continuous Learning
+## 📊 Stats
 
 <div align="center">
 
-| 학습 영역 | 내용 |
-|:---:|:---|
-| 🔍 **성능 최적화** | JPA N+1 문제 해결, 쿼리 최적화, 인덱스 설계 |
-| 🚀 **CI/CD** | GitHub Actions, Blue-Green 무중단 배포 |
-| ✅ **테스트** | JUnit, Mockito, 통합 테스트, K6 부하 테스트 |
-| 📖 **설계** | 클린 코드, 객체지향 설계 원칙, 도메인 주도 설계 |
-| 📝 **문서화** | 기술 블로그 운영, API 문서화, README 작성 |
+<img src="https://github-readme-stats.vercel.app/api?username=0802222&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&count_private=true" height="165" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=0802222&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117" height="165" />
+
+[📈 커밋 활동 통계 보기](https://gist.github.com/0802222/338403779e7b3bb02be6078db4c7d778)
 
 </div>
-
-<br>
-
-## 📫 Contact
-
-<div align="center">
-
-**함께 성장하고 싶은 백엔드 개발자입니다!**
-
-관심 있으시다면 언제든 연락 주세요 😊
-
-<br>
-
-[![Blog](https://img.shields.io/badge/Tech%20Blog-devmee.tistory.com-20C997?style=for-the-badge&logo=tistory&logoColor=white)](https://devmee.tistory.com/)
-[![Email](https://img.shields.io/badge/Email-your--email%40example.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your-email@example.com)
-[![GitHub](https://img.shields.io/badge/GitHub-0802222-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0802222)
-
-<br>
-
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer)
-
-</div>
-
-
-## 🚉 Commit Activity Stats
-
-[커밋 통계 보기](https://gist.github.com/0802222/338403779e7b3bb02be6078db4c7d778)
